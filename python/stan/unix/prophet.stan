@@ -80,7 +80,7 @@ data {
   int<lower=1> K;       // Number of regressors
   vector[T] t;          // Time
   vector[T] cap;        // Capacities for logistic trend
-  vector[T] y;          // Time series
+  vector<lower=0>[T] y;          // Time series
   int S;                // Number of changepoints
   vector[S] t_change;   // Times of trend changepoints
   matrix[T,K] X;        // Regressors
